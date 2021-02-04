@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Playfair+Display:wght@700&family=Roboto:wght@700&display=swap');
+
+//variables
+
+//fonts
+$mont: 'Montserrat';
+$robo: 'Roboto';
+$play: 'Playfair Display';
+
+//colors
+$black: #000;
+$white: #fff;
+
+//breakpoints
+$tab: 768px;
+$sdesk: 1024px;
+$mdesk: 1336px;
+$ldesk: 1600px;
+
+
+//init
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $black;
+    overflow: hidden;
+    position: relative;
+}
+
+
+//grain effect
+.portfolio-page {
+    background-color: $black;
+    position: relative;
+    visibility: hidden;
+}
+
+.grainy-effect {
+    height: 100%;
+    background-color: $black;
+    opacity: 0.2;
+    &:after {
+        animation: grain 16s steps(10) infinite;
+        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+        content: "";
+        height: 300%;
+        left: -50%;
+        opacity: 0.3;
+        position: fixed;
+        top: -110%;
+        width: 300%;
+        z-index: -1;
+    }
+}
+
+
+
+
+//keyframes
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes arrow {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1500;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 1500;
+    }
+}
+/*
+@keyframes shake {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
+}
+*/

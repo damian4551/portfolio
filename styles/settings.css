@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Playfair+Display:wght@700&family=Roboto:wght@700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-page {
+  background-color: #000;
+  position: relative;
+  visibility: hidden;
+}
+
+.grainy-effect {
+  height: 100%;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+.grainy-effect:after {
+  -webkit-animation: grain 16s steps(10) infinite;
+          animation: grain 16s steps(10) infinite;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.3;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+  z-index: -1;
+}
+
+@-webkit-keyframes grain {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%);
+  }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%);
+  }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%);
+  }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%);
+  }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%);
+  }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%);
+  }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%);
+  }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%);
+  }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%);
+  }
+}
+
+@keyframes grain {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%);
+  }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%);
+  }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%);
+  }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%);
+  }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%);
+  }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%);
+  }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%);
+  }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%);
+  }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1500;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1500;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1500;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1500;
+  }
+}
+
+/*
+@keyframes shake {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
+}
+*/
+/*# sourceMappingURL=settings.css.map */
