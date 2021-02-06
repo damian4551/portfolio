@@ -33,6 +33,9 @@ body {
     position: relative;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 //grain effect
 .portfolio-page {
