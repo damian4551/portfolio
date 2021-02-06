@@ -28,9 +28,9 @@ $ldesk: 1600px;
 body {
     max-width: 100%;
     background-color: $black;
-    overflow: hidden;
-    position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
 }
 
 

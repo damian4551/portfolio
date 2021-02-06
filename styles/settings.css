@@ -9,9 +9,9 @@
 body {
   max-width: 100%;
   background-color: #000;
-  overflow: hidden;
-  position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
 }
 
 .portfolio-page {
