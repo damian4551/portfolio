@@ -19,7 +19,7 @@ window.onload = () => {
     }, 4000);
 
     setTimeout(function(){
-        document.body.style.overflowY = "scroll";
+        document.body.style.overflowY = "visible";
         layer.style.visibility = "hidden";
         page.style.visibility = "visible";
     }, 5500);
