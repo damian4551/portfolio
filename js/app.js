@@ -97,6 +97,7 @@ let isValidated = false;
 
 const robot = document.createElement("div");
 
+
 const pistolCursorMove = (e) => {
     pistolCursor.style.top = e.pageY + "px";
     pistolCursor.style.left = e.pageX + "px";
@@ -110,8 +111,26 @@ const changeHoverCursor = () => {
     }
 }
 
-const sendMessage = () => {
-    alert('send');
+
+const sendMessage  = async (dataForm) => {   
+
+    checkboxText.innerText = "sending the message...";
+
+    const response = await fetch(
+        'https://email-service-portfolio-dk2021.herokuapp.com/',
+        {
+            method: 'POST',
+            body: dataForm
+        }
+    );
+    
+    const data = await response.text();
+
+    checkboxText.innerText = data;
+
+    email.value = "";
+    message.value = "";
+
 }
 
 const validateInputs = () => {
@@ -170,12 +189,18 @@ message.addEventListener("keyup", () => {
 });
 
 
-sendBtn.addEventListener("click", () => {
+sendBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let dataForm = new FormData();
+    dataForm.append("email", email.value);
+    dataForm.append("message", message.value);
+
     if(isVerified == true && isValidated == true) {
-        sendMessage();
+        sendMessage(dataForm);
     } else if(isVerified == true && isValidated == false) {
         checkboxText.innerText = "couldn't send a message, check informations";
     }
+
 });
 
 
