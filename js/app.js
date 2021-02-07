@@ -154,7 +154,7 @@ const createRobot = () => {
         contactSection.appendChild(robot);
         
         currentTop = Math.floor(Math.random() * documentHeight) + 1;
-        currentLeft = Math.floor(Math.random() * documentWidth - 100) + 1;
+        currentLeft = Math.floor(Math.random() * (documentWidth - 100)) + 1;
         
         robot.style.top = currentTop + "px";
         robot.style.left = currentLeft + "px";
